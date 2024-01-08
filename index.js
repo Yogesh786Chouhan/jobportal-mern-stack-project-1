@@ -36,11 +36,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // static file for render.com
-// app.use(express.static(path.join(__dirname, "./frontend/build")));
+app.use(express.static(path.join(__dirname, "./frontend/build")));
 
-// app.get("*", function (req, res) {
-//     res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'));
-// });
+app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'));
+});
 
 
 
